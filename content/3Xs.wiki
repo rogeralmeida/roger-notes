@@ -1,4 +1,18 @@
+= Contents =
+  - [[#Triple X|Triple X]]
+      - [[#Triple X#Overview|Overview]]
+      - [[#Triple X#eXplore|eXplore]]
+      - [[#Triple X#eXpand|eXpand]]
+      - [[#Triple X#eXtract|eXtract]]
+    - [[#Triple X#Dimensions|Dimensions]]
+      - [[#Triple X#Dimensions#Engineering Organisation|Engineering Organisation]]
+      - [[#Triple X#Dimensions#Techinical Solution|Techinical Solution]]
+      - [[#Triple X#Dimensions#Product Vision|Product Vision]]
+      - [[#Triple X#Dimensions#Product Support|Product Support]]
+      - [[#Triple X#Dimensions#Go To Market|Go To Market]]
+
 = Triple X =
+
 
 I first came accross this Kent Beck talk at Pivotal:
 %plainhtml <iframe width="560" height="315" src="https://www.youtube.com/embed/YX2XR73LnRY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -14,8 +28,34 @@ Kent explains that a product will go through 3 distinct phases:
 * eXtract
 
 === eXplore ===
+A new product starts as an idea.
+For it to become a real product it has to find a [[Product Market Fit]].
+But before find a Product Market Fit, an idea has to find a [[Product Solution Fit]].
+For weeks, months and sometimes even years, the day to day of a product team will be based on:
+* _What are the features that our potential customers want?_
+* _What else would our current users want?_
+* _How can we reduce the customer turnover?_
+
+True to be said, this questions will probably persist during the whole life cycle of a product. But during the *eXplore* phase these questions dominate the product conversation.
+
+This reallity will last for as long as it needs to last, but as Kent says, at some moment the priority will change.
+One day during the stand-up someone will mention that scale is the new priority. At that moment, the product is moving to the *eXpand* phase.
+
 === eXpand ===
+In the *eXpand* phase the product is expanding.
+Is general there is some resource that will not scale at the required velocity, unless some work is done.
+
+It is very common for this resource to be a technical resource: _a database_ , _memory_, _queues and dead letter queues_, _etc..._
+But it can be non technical resources as well. For instance: _customer support_, _Sales team_, _project team_, _partnerships_, _etc..._
+
+During this phase the top priority is not to include new features anymore, instead we talk about how to bring the existing features to more users. True to be said, there will still be new features, but they will not be the top priority.
+
+The *eXpand* phase can last for years. A product can go from a local niche to a global platform.
+Until one day the expansions slows down and then, expanding is not the top priority anymore. Instead, the focus becomes on how to reduce the operational cost for the same product. At that moment the new phase has started *eXtract*
+
 === eXtract ===
+During the *eXtract* phase the mantra is: _How can we do more with less?_
+In the *eXtract* phase a product focus on how to reduce the cost of maintaining and running the product.
 
 == Dimensions ==
 === Engineering Organisation ===
