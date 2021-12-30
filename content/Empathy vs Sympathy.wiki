@@ -1,0 +1,14 @@
+= Empathy vs Sympathy =
+
+Empathy is about connection. Sympathy is about disconection.
+
+
+== Empathy ==
+    I will seat with you in the dark
+== Sympathy: ==
+    At least you are seated :/
+
+
+Check this [[https://youtu.be/1Evwgu369Jw |Brene Brown video]]
+
+%plainhtml <iframe width="560" height="315" src="https://www.youtube.com/embed/1Evwgu369Jw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
