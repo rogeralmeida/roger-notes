@@ -1,15 +1,31 @@
 <html>
-<head>
+  <head>
     <link rel="Stylesheet" type="text/css" href="%root_path%style.css" />
     <title>%title%</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-</head>
-<body>
+  </head>
+  <body>
     <a href="%root_path%index.html">Index</a> |
     <a href="%root_path%diary/diary.html">Diary</a>
-    <hr>
-    <div class="content">
-    %content%
-    </div>
-</body>
+    <hr />
+    <div class="content">%content%</div>
+    <div id="disqus_thread"></div>
+    <script>
+      ;(function () {
+        // DON'T EDIT BELOW THIS LINE
+        var d = document,
+          s = d.createElement('script')
+        s.src = 'https://roger-notes.disqus.com/embed.js'
+        s.setAttribute('data-timestamp', +new Date())
+        ;(d.head || d.body).appendChild(s)
+      })()
+    </script>
+    <noscript
+      >Please enable JavaScript to view the
+      <a href="https://disqus.com/?ref_noscript"
+        >comments powered by Disqus.</a
+      ></noscript
+    >
+    Copy
+  </body>
 </html>
