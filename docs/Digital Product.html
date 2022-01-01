@@ -15,10 +15,33 @@
     <!-- CSS only -->
   </head>
   <body>
-    <a href="index.html">Index</a> |
-    <a href="diary/diary.html">Diary</a>
-    <hr />
-    <div class="content">
+    <div class="container">
+      <div
+        class="
+          d-flex
+          flex-column flex-md-row
+          align-items-center
+          pb-3
+          mb-4
+          border-bottom
+        "
+      >
+        <a
+          href="index.html"
+          class="d-flex align-items-center text-dark text-decoration-none"
+        >
+          <span class="fs-4">Roger's Notes</span>
+        </a>
+
+        <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
+          <a
+            class="me-3 py-2 text-dark text-decoration-none"
+            href="index.html"
+            >Index</a
+          >
+        </nav>
+      </div>
+      <div class="content">
 <div id="Digital Product"><h1 id="Digital Product" class="header"><a href="#Digital Product">Digital Product</a></h1></div>
 
 <p>
@@ -29,6 +52,7 @@ A product that is not analogic.
 I translate this to Software Based product
 </p>
 </div>
+    </div>
     <div id="disqus_thread"></div>
     <!-- JavaScript Bundle with Popper -->
     <script
