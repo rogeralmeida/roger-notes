@@ -1,18 +1,7 @@
-= Contents =
-  - [[#Triple X|Triple X]]
-      - [[#Triple X#Overview|Overview]]
-      - [[#Triple X#eXplore|eXplore]]
-      - [[#Triple X#eXpand|eXpand]]
-      - [[#Triple X#eXtract|eXtract]]
-    - [[#Triple X#Dimensions|Dimensions]]
-      - [[#Triple X#Dimensions#Engineering Organisation|Engineering Organisation]]
-      - [[#Triple X#Dimensions#Techinical Solution|Techinical Solution]]
-      - [[#Triple X#Dimensions#Product Vision|Product Vision]]
-      - [[#Triple X#Dimensions#Product Support|Product Support]]
-      - [[#Triple X#Dimensions#Go To Market|Go To Market]]
 
 = Triple X =
 
+=== Overview ===
 
 I first came accross this Kent Beck talk at Pivotal:
 %plainhtml <iframe width="560" height="315" src="https://www.youtube.com/embed/YX2XR73LnRY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -21,7 +10,6 @@ He got my attention when he mentioned that he could be _wrong_
 
 This talk triggered a line of thinking interesting about the Life Cycle of a [[Digital Product]]
 
-=== Overview ===
 Kent explains that a product will go through 3 distinct phases:
 * eXplore
 * eXpand

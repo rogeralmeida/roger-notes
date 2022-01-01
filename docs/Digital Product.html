@@ -9,12 +9,16 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.css"
+    />
     <link rel="Stylesheet" type="text/css" href="style.css" />
     <title>Roger Notes: Digital Product</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <!-- CSS only -->
   </head>
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container">
       <div
         class="
@@ -41,7 +45,9 @@
           >
         </nav>
       </div>
-      <div class="content">
+      <div class="row">
+        <div class="col-10">
+          <div class="content">
 <div id="Digital Product"><h1 id="Digital Product" class="header"><a href="#Digital Product">Digital Product</a></h1></div>
 
 <p>
@@ -52,14 +58,21 @@ A product that is not analogic.
 I translate this to Software Based product
 </p>
 </div>
+          <div id="disqus_thread"></div>
+        </div>
+        <div class="bd-toc col-2">
+          <nav id="toc" data-toggle="toc"></nav>
+        </div>
+      </div>
     </div>
-    <div id="disqus_thread"></div>
     <!-- JavaScript Bundle with Popper -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script>
     <script>
       ;(function () {
         // DON'T EDIT BELOW THIS LINE
