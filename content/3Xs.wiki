@@ -1,7 +1,7 @@
 
 = Triple X =
 
-=== Overview ===
+== Overview ==
 
 I first came accross this Kent Beck talk at Pivotal:
 %plainhtml <iframe width="560" height="315" src="https://www.youtube.com/embed/YX2XR73LnRY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

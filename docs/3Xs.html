@@ -51,7 +51,7 @@
 
 <div id="Triple X"><h1 id="Triple X" class="header"><a href="#Triple X">Triple X</a></h1></div>
 
-<div id="Triple X-Overview"><h3 id="Overview" class="header"><a href="#Triple X-Overview">Overview</a></h3></div>
+<div id="Triple X-Overview"><h2 id="Overview" class="header"><a href="#Triple X-Overview">Overview</a></h2></div>
 
 <p>
 I first came accross this Kent Beck talk at Pivotal:
@@ -81,7 +81,7 @@ eXtract
 
 </ul>
 
-<div id="Triple X-eXplore"><h3 id="eXplore" class="header"><a href="#Triple X-eXplore">eXplore</a></h3></div>
+<div id="Triple X-Overview-eXplore"><h3 id="eXplore" class="header"><a href="#Triple X-Overview-eXplore">eXplore</a></h3></div>
 <p>
 A new product starts as an idea.
 For it to become a real product it has to find a <a href="Product Market Fit.html">Product Market Fit</a>.
@@ -101,17 +101,17 @@ For weeks, months and sometimes even years, the day to day of a product team wil
 </ul>
 
 <p>
-True to be said, this questions will probably persist during the whole life cycle of a product. But during the <span id="Triple X-eXplore-eXplore"></span><strong id="eXplore">eXplore</strong> phase these questions dominate the product conversation.
+True to be said, this questions will probably persist during the whole life cycle of a product. But during the <span id="Triple X-Overview-eXplore-eXplore"></span><strong id="eXplore">eXplore</strong> phase these questions dominate the product conversation.
 </p>
 
 <p>
 This reallity will last for as long as it needs to last, but as Kent says, at some moment the priority will change.
-One day during the stand-up someone will mention that scale is the new priority. At that moment, the product is moving to the <span id="Triple X-eXplore-eXpand"></span><strong id="eXpand">eXpand</strong> phase.
+One day during the stand-up someone will mention that scale is the new priority. At that moment, the product is moving to the <span id="Triple X-Overview-eXplore-eXpand"></span><strong id="eXpand">eXpand</strong> phase.
 </p>
 
-<div id="Triple X-eXpand"><h3 id="eXpand" class="header"><a href="#Triple X-eXpand">eXpand</a></h3></div>
+<div id="Triple X-Overview-eXpand"><h3 id="eXpand" class="header"><a href="#Triple X-Overview-eXpand">eXpand</a></h3></div>
 <p>
-In the <span id="Triple X-eXpand-eXpand"></span><strong id="eXpand">eXpand</strong> phase the product is expanding.
+In the <span id="Triple X-Overview-eXpand-eXpand"></span><strong id="eXpand">eXpand</strong> phase the product is expanding.
 Is general there is some resource that will not scale at the required velocity, unless some work is done.
 </p>
 
@@ -125,14 +125,14 @@ During this phase the top priority is not to include new features anymore, inste
 </p>
 
 <p>
-The <span id="Triple X-eXpand-eXpand"></span><strong id="eXpand">eXpand</strong> phase can last for years. A product can go from a local niche to a global platform.
-Until one day the expansions slows down and then, expanding is not the top priority anymore. Instead, the focus becomes on how to reduce the operational cost for the same product. At that moment the new phase has started <span id="Triple X-eXpand-eXtract"></span><strong id="eXtract">eXtract</strong>
+The <span id="Triple X-Overview-eXpand-eXpand"></span><strong id="eXpand">eXpand</strong> phase can last for years. A product can go from a local niche to a global platform.
+Until one day the expansions slows down and then, expanding is not the top priority anymore. Instead, the focus becomes on how to reduce the operational cost for the same product. At that moment the new phase has started <span id="Triple X-Overview-eXpand-eXtract"></span><strong id="eXtract">eXtract</strong>
 </p>
 
-<div id="Triple X-eXtract"><h3 id="eXtract" class="header"><a href="#Triple X-eXtract">eXtract</a></h3></div>
+<div id="Triple X-Overview-eXtract"><h3 id="eXtract" class="header"><a href="#Triple X-Overview-eXtract">eXtract</a></h3></div>
 <p>
-During the <span id="Triple X-eXtract-eXtract"></span><strong id="eXtract">eXtract</strong> phase the mantra is: <em>How can we do more with less?</em>
-In the <span id="Triple X-eXtract-eXtract"></span><strong id="eXtract">eXtract</strong> phase a product focus on how to reduce the cost of maintaining and running the product.
+During the <span id="Triple X-Overview-eXtract-eXtract"></span><strong id="eXtract">eXtract</strong> phase the mantra is: <em>How can we do more with less?</em>
+In the <span id="Triple X-Overview-eXtract-eXtract"></span><strong id="eXtract">eXtract</strong> phase a product focus on how to reduce the cost of maintaining and running the product.
 </p>
 
 <div id="Triple X-Dimensions"><h2 id="Dimensions" class="header"><a href="#Triple X-Dimensions">Dimensions</a></h2></div>
@@ -144,8 +144,11 @@ In the <span id="Triple X-eXtract-eXtract"></span><strong id="eXtract">eXtract</
 </div>
           <div id="disqus_thread"></div>
         </div>
-        <div class="bd-toc col-2">
-          <nav id="toc" data-toggle="toc"></nav>
+        <div class="bd-toc col-2 text-muted">
+          <strong class="d-block h6 my-2 pb-2 border-bottom"
+            >On this page</strong
+          >
+          <nav id="toc"></nav>
         </div>
       </div>
     </div>
@@ -157,6 +160,20 @@ In the <span id="Triple X-eXtract-eXtract"></span><strong id="eXtract">eXtract</
       crossorigin="anonymous"
     ></script>
     <script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script>
+    <script>
+      $(function () {
+        const navSelector = '#toc'
+        const $myNav = $(navSelector)
+        const headers = $(':header')
+        Toc.init({
+          $nav: $myNav,
+          $scope: headers,
+        })
+        $('body').scrollspy({
+          target: navSelector,
+        })
+      })
+    </script>
     <script>
       ;(function () {
         // DON'T EDIT BELOW THIS LINE

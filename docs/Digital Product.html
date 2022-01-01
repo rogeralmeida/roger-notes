@@ -60,8 +60,11 @@ I translate this to Software Based product
 </div>
           <div id="disqus_thread"></div>
         </div>
-        <div class="bd-toc col-2">
-          <nav id="toc" data-toggle="toc"></nav>
+        <div class="bd-toc col-2 text-muted">
+          <strong class="d-block h6 my-2 pb-2 border-bottom"
+            >On this page</strong
+          >
+          <nav id="toc"></nav>
         </div>
       </div>
     </div>
@@ -73,6 +76,20 @@ I translate this to Software Based product
       crossorigin="anonymous"
     ></script>
     <script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script>
+    <script>
+      $(function () {
+        const navSelector = '#toc'
+        const $myNav = $(navSelector)
+        const headers = $(':header')
+        Toc.init({
+          $nav: $myNav,
+          $scope: headers,
+        })
+        $('body').scrollspy({
+          target: navSelector,
+        })
+      })
+    </script>
     <script>
       ;(function () {
         // DON'T EDIT BELOW THIS LINE
