@@ -9,6 +9,7 @@
 * [[Three Miracles (or how to win trust)]]
 * [[Illusion of competence]]
 * [[How I found a job in Sydney, Australia]]
+* [[Stand-up anti-pattern: Report to boss]]
 == Tech Notes ==
 * [[Docker Cheatsheet]]
 * [[Euler's Journey - Problem 1]]
