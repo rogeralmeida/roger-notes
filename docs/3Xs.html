@@ -186,7 +186,7 @@ In the <span id="Triple X-Overview-eXtract-eXtract"></span><strong id="eXtract">
         const $myNav = $(navSelector)
         const headers = $(':header')
         headers.each((index, obj) => {
-          obj.id = obj.id.replace(/ /g, '-')
+          obj.id = obj.id.replace(/[\s|:|\.]*/g, '')
         })
         Toc.init({
           $nav: $myNav,

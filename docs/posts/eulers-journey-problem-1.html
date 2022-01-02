@@ -223,7 +223,7 @@ The <code>select</code> method is very useful to filter a collection. The <code>
         const $myNav = $(navSelector)
         const headers = $(':header')
         headers.each((index, obj) => {
-          obj.id = obj.id.replace(/ /g, '-')
+          obj.id = obj.id.replace(/[\s|:|\.]*/g, '')
         })
         Toc.init({
           $nav: $myNav,

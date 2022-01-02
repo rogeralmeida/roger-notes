@@ -77,6 +77,9 @@
 <li>
 <a href="Three Miracles (or how to win trust).html">Three Miracles (or how to win trust)</a>
 
+<li>
+<a href="Illusion of competence.html">Illusion of competence</a>
+
 </ul>
 <div id="Roger Notes-Tech Notes"><h2 id="Tech Notes" class="header"><a href="#Roger Notes-Tech Notes">Tech Notes</a></h2></div>
 <ul>
@@ -125,7 +128,7 @@
         const $myNav = $(navSelector)
         const headers = $(':header')
         headers.each((index, obj) => {
-          obj.id = obj.id.replace(/ /g, '-')
+          obj.id = obj.id.replace(/[\s|:|\.]*/g, '')
         })
         Toc.init({
           $nav: $myNav,
