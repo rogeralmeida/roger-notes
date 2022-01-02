@@ -1,0 +1,28 @@
+= Docker Cheatsheet =
+
+== How to check how much memory the containers are consuming? ==
+
+{{{shell
+
+  docker stats
+}}}
+
+docs: https://docs.docker.com/engine/reference/commandline/stats/
+
+== Jump into a shell prompt inside a docker container ==
+{{{
+  docker-compose run --rm worker /bin/bash
+}}}
+
+== Remove docker compose images using Make ==
+
+In your Makefile:
+{{{make
+  DOCKER_IMAGES=$(shell docker images | grep <NAME OF YOUR APP|DIR >| sed -E 's/[[:space:]]+/,/g' | cut -d',' -f3)
+  ...
+  remove_docker_images: stop_all
+	  docker image rm --force $(DOCKER_IMAGES)
+  .NOPHONY: remove_docker_images
+}}}
+
+

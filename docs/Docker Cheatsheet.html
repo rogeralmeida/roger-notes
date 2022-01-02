@@ -14,7 +14,7 @@
       href="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.css"
     />
     <link rel="Stylesheet" type="text/css" href="style.css" />
-    <title>Roger Notes: index</title>
+    <title>Roger Notes: Docker Cheatsheet</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <!-- CSS only -->
   </head>
@@ -48,35 +48,36 @@
       <div class="row">
         <div class="col-10">
           <div class="content">
-<div id="Roger Notes"><h1 id="Roger Notes" class="header"><a href="#Roger Notes">Roger Notes</a></h1></div>
+<div id="Docker Cheatsheet"><h1 id="Docker Cheatsheet" class="header"><a href="#Docker Cheatsheet">Docker Cheatsheet</a></h1></div>
 
-<div id="Roger Notes-Product"><h2 id="Product" class="header"><a href="#Roger Notes-Product">Product</a></h2></div>
-<ul>
-<li>
-<a href="3Xs.html">3Xs</a>
+<div id="Docker Cheatsheet-How to check how much memory the containers are consuming?"><h2 id="How to check how much memory the containers are consuming?" class="header"><a href="#Docker Cheatsheet-How to check how much memory the containers are consuming?">How to check how much memory the containers are consuming?</a></h2></div>
 
-</ul>
-<div id="Roger Notes-Leadership"><h2 id="Leadership" class="header"><a href="#Roger Notes-Leadership">Leadership</a></h2></div>
-<ul>
-<li>
-<a href="Empathy vs Sympathy.html">Empathy vs Sympathy</a>
+<pre shell>
 
-<li>
-<a href="Hire slow &amp; fire fast.html">Hire slow &amp; fire fast</a>
+  docker stats
+</pre>
 
-</ul>
-<div id="Roger Notes-Random"><h2 id="Random" class="header"><a href="#Roger Notes-Random">Random</a></h2></div>
-<ul>
-<li>
-<a href="Three Miracles (or how to win trust).html">Three Miracles (or how to win trust)</a>
+<p>
+docs: <a href="https://docs.docker.com/engine/reference/commandline/stats/">https://docs.docker.com/engine/reference/commandline/stats/</a>
+</p>
 
-</ul>
-<div id="Roger Notes-Tech Notes"><h2 id="Tech Notes" class="header"><a href="#Roger Notes-Tech Notes">Tech Notes</a></h2></div>
-<ul>
-<li>
-<a href="Docker Cheatsheet.html">Docker Cheatsheet</a>
+<div id="Docker Cheatsheet-Jump into a shell prompt inside a docker container"><h2 id="Jump into a shell prompt inside a docker container" class="header"><a href="#Docker Cheatsheet-Jump into a shell prompt inside a docker container">Jump into a shell prompt inside a docker container</a></h2></div>
+<pre>
+  docker-compose run --rm worker /bin/bash
+</pre>
 
-</ul>
+<div id="Docker Cheatsheet-Remove docker compose images using Make"><h2 id="Remove docker compose images using Make" class="header"><a href="#Docker Cheatsheet-Remove docker compose images using Make">Remove docker compose images using Make</a></h2></div>
+
+<p>
+In your Makefile:
+</p>
+<pre make>
+  DOCKER_IMAGES=$(shell docker images | grep &lt;NAME OF YOUR APP|DIR &gt;| sed -E 's/[[:space:]]+/,/g' | cut -d',' -f3)
+  ...
+  remove_docker_images: stop_all
+	  docker image rm --force $(DOCKER_IMAGES)
+  .NOPHONY: remove_docker_images
+</pre>
 </div>
           <div id="disqus_thread"></div>
         </div>

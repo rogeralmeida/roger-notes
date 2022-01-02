@@ -5,6 +5,7 @@
 == Leadership ==
 * [[Empathy vs Sympathy]]
 * [[Hire slow & fire fast]]
-== Career == 
 == Random ==
 * [[Three Miracles (or how to win trust)]]
+== Tech Notes ==
+* [[Docker Cheatsheet]]
