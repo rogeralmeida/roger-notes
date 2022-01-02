@@ -250,3 +250,7 @@ code {
   height: calc(100vh - 7rem);
   overflow-y: auto;
 }
+
+nav[data-toggle='toc'] .nav .nav {
+  display: block;
+}
