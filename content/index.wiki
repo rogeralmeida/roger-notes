@@ -12,6 +12,8 @@
 * [[Stand-up anti-pattern: Report to boss]]
 * [[My e-mail policy]]
 * [[Information radiators vs Information refrigerators]]
+* [[Better be idiot for 5 minutes]]
+ 
 == Tech Notes ==
 * [[Docker Cheatsheet]]
 * [[Euler's Journey - Problem 1]]
