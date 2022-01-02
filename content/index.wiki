@@ -10,6 +10,8 @@
 * [[Illusion of competence]]
 * [[How I found a job in Sydney, Australia]]
 * [[Stand-up anti-pattern: Report to boss]]
+* [[My e-mail policy]]
+* [[Information radiators vs Information refrigerators]]
 == Tech Notes ==
 * [[Docker Cheatsheet]]
 * [[Euler's Journey - Problem 1]]
