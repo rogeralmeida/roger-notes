@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.css"
+    />
+    <link rel="Stylesheet" type="text/css" href="style.css" />
+    <!-- <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css" /> -->
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/base16/railscasts.min.css"
+    />
+    <title>Roger Notes: Tracing bullet pattern</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!-- CSS only -->
+  </head>
+  <body data-spy="scroll" data-target="#toc">
+    <div class="container">
+      <div
+        class="
+          d-flex
+          flex-column flex-md-row
+          align-items-center
+          pb-3
+          mb-4
+          border-bottom
+        "
+      >
+        <a
+          href="index.html"
+          class="d-flex align-items-center text-dark text-decoration-none"
+        >
+          <span class="fs-4">Roger's Notes</span>
+        </a>
+
+        <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
+          <a
+            class="me-3 py-2 text-dark text-decoration-none"
+            href="index.html"
+            >Index</a
+          >
+        </nav>
+      </div>
+      <div class="row">
+        <div class="col-10">
+          <div class="content">
+<div id="Tracing bullet pattern"><h1 id="Tracing bullet pattern" class="header"><a href="#Tracing bullet pattern">Tracing bullet pattern</a></h1></div>
+
+<p>
+Integration points are critical components of a software architecture. While the software is manipulating data in-memory, it is operating in a controlled environment. But when you have to move data between different components then you have a higher chance of having problems. The tracing bullet is a delivery pattern that addresses this risk early on in a software delivery project.
+</p>
+
+
+<p>
+The analogy comes from a controversial source. According to Wikipedia tracing bullet is:
+</p>
+<blockquote>
+an ammunition built with a small pyrotechnic charge in their base. Ignited by the burning powder, the pyrotechnic composition burns very brightly, making the projectile trajectory visible to the naked eye during daylight, and very bright during nighttime firing. This enables the shooter to make aiming corrections without observing the impact of the rounds fired and without using the sights of the weapon. Tracer fire can also be used to signal to other shooters where to concentrate their fire during battle.
+</blockquote>
+
+<p>
+The software delivery analogy is: "How we can send a tracing message (not a bullet) through our new software so that we can inspect its behaviour?"
+</p>
+
+
+
+<div id="Tracing bullet pattern-How to implement it"><h2 id="How to implement it" class="header"><a href="#Tracing bullet pattern-How to implement it">How to implement it</a></h2></div>
+
+<p>
+This is a delivery pattern that is not hard to apply. Instead of building all the layers in your new project, focus on the integration points and observability. Let the business rules and acceptance criteria out.
+Suppose that you have the following system architecture:
+</p>
+
+ <div class="mermaid">
+    graph LR
+       client[Client]
+       rest[Rest API]
+       queue[Queue]
+       dispatch[Dispatcher]
+       client-- 1. /post orders -->rest
+       client-- 2.0 /put order/ID -->rest
+       rest-- 2.1 dispatch order -->queue
+       dispatch-- 3. fulfill order -->queue
+ </div>
+
+<p>
+This is a simplified version of an ordering system. The first request creates a new order. The second request updates marks the order as payed and add the Order to a processing queue. The Dispatcher component consumes the queue and ensures the order fulfilment.
+</p>
+
+<p>
+If we want to create a tracing bullet for this system we could:
+</p>
+
+<ul>
+<li>
+Implement a minimal entity with a ID and a STATE representation
+
+<li>
+Make one request to the rest component to create the new entity
+
+<li>
+Make a second request to the rest component to update the entity
+
+<li>
+Observe if the new entity was sent to the processing queue
+
+<li>
+Observe if the new entity was processed by the dispatcher component
+
+</ul>
+
+<p>
+There is no code to check stock, or prevent duplication, or dead letter, or price validation. The entity representation is not completed as well. It has only one ID and a state field. For now we are not worrying about data integrity.
+The implementation can be as small as having only a single fat controller in the rest component. The whole point of the Tracing Bullet is to be able to Observe the flow. Ideally, the tracing bullet should be fired in production environment. Although there is value in running the tracing bullet in UAT or pre-prod, the real value comes from knowing that the system works where it must work (production environment)!
+</p>
+
+<div id="Tracing bullet pattern-Why to start with the integration points?"><h2 id="Why to start with the integration points?" class="header"><a href="#Tracing bullet pattern-Why to start with the integration points?">Why to start with the integration points?</a></h2></div>
+
+<p>
+In Release It! Design and Deploy Production-Ready Software Michael T. Nyger wrote:
+</p>
+<blockquote>
+“Integration points are the number-one killer of systems. Every single one of those feeds presents a stability risk.”
+</blockquote>
+<p>
+And I have to agree with Michael. When a system is manipulating data in-memory it is operating in a safe environment. The risk comes when this data has to travel to a different location. This can be a database, file, or other address in the network. That is the kind of risk that is better to be adressed early in the project.
+This is particularly important if you are introducing new integrations points. In a world of cloud adoption and hybrid cloud implementation this is a must.
+Starting with the integration points gives as the confidence that all the components can talk to each other.
+</p>
+
+<div id="Tracing bullet pattern-When to use it"><h2 id="When to use it" class="header"><a href="#Tracing bullet pattern-When to use it">When to use it</a></h2></div>
+<p>
+  I recommend the use of this pattern as the first milestone of a new project. Or as a first milestone for a new feature in an existent project.
+</p>
+
+<div id="Tracing bullet pattern-Caveats"><h2 id="Caveats" class="header"><a href="#Tracing bullet pattern-Caveats">Caveats</a></h2></div>
+<p>
+It is important to protect the production environment from side effects. You might have to use feature-toggles to prevent side effects. The neighbourhood might need some work to understand the tracing bullet as well. A common way to solve this is to replace the real implementation with a log line. In the example above, we could change the component that consumes the queue to identify the item as a tracing bullet and log a message. This would give us the confidence that the integration is working while preventing a fake order to be fulfilled.
+</p>
+
+<div id="Tracing bullet pattern-Conclusion"><h2 id="Conclusion" class="header"><a href="#Tracing bullet pattern-Conclusion">Conclusion</a></h2></div>
+<p>
+The tracing bullet pattern can help you address the "last mile problems" earlier in your project. It doesn't require much effort to implement it. Actually the hard part of implementing this pattern is to keep in mind that less is more.
+</p>
+</div>
+          <div id="disqus_thread"></div>
+        </div>
+        <div class="bd-toc col-2 text-muted">
+          <strong class="d-block h6 my-2 pb-2 border-bottom"
+            >On this page</strong
+          >
+          <nav id="toc"></nav>
+        </div>
+      </div>
+    </div>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+    <script>
+      document
+        .querySelectorAll('pre')
+        .forEach((block) => hljs.highlightElement(block))
+      document
+        .querySelectorAll('code')
+        .forEach((block) => hljs.highlightElement(block))
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
+    <script>
+      anchors.add()
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>
+      $(function () {
+        const navSelector = '#toc'
+        const $myNav = $(navSelector)
+        const headers = $(':header')
+        headers.each((index, obj) => {
+          obj.id = obj.id.replace(/[^a-zA-Z0-9]/g, '')
+        })
+        Toc.init({
+          $nav: $myNav,
+          $scope: headers,
+        })
+        $('body').scrollspy({
+          target: navSelector,
+        })
+      })
+    </script>
+    <script>
+      ;(function () {
+        // DON'T EDIT BELOW THIS LINE
+        var d = document,
+          s = d.createElement('script')
+        s.src = 'https://roger-notes.disqus.com/embed.js'
+        s.setAttribute('data-timestamp', +new Date())
+        ;(d.head || d.body).appendChild(s)
+      })()
+    </script>
+    <noscript
+      >Please enable JavaScript to view the
+      <a href="https://disqus.com/?ref_noscript"
+        >comments powered by Disqus.</a
+      ></noscript
+    >
+  </body>
+</html>
