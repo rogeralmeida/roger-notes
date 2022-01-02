@@ -162,7 +162,7 @@ When I learn a new process|workflow I like to draw it and show it to how explain
         const $myNav = $(navSelector)
         const headers = $(':header')
         headers.each((index, obj) => {
-          obj.id = obj.id.replace(/[\s|:|\.]*/g, '')
+          obj.id = obj.id.replace(/[^a-zA-Z0-9]/g, '')
         })
         Toc.init({
           $nav: $myNav,

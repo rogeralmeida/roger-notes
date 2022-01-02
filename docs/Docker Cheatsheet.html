@@ -123,7 +123,7 @@ In your Makefile:
         const $myNav = $(navSelector)
         const headers = $(':header')
         headers.each((index, obj) => {
-          obj.id = obj.id.replace(/[\s|:|\.]*/g, '')
+          obj.id = obj.id.replace(/[^a-zA-Z0-9]/g, '')
         })
         Toc.init({
           $nav: $myNav,

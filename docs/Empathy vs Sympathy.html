@@ -115,7 +115,7 @@ Check this <a href="https://youtu.be/1Evwgu369Jw ">Brene Brown video</a>
         const $myNav = $(navSelector)
         const headers = $(':header')
         headers.each((index, obj) => {
-          obj.id = obj.id.replace(/[\s|:|\.]*/g, '')
+          obj.id = obj.id.replace(/[^a-zA-Z0-9]/g, '')
         })
         Toc.init({
           $nav: $myNav,
