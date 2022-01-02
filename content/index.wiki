@@ -8,6 +8,7 @@
 == Random ==
 * [[Three Miracles (or how to win trust)]]
 * [[Illusion of competence]]
+* [[How I found a job in Sydney, Australia]]
 == Tech Notes ==
 * [[Docker Cheatsheet]]
 * [[Euler's Journey - Problem 1]]
