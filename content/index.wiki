@@ -9,3 +9,4 @@
 * [[Three Miracles (or how to win trust)]]
 == Tech Notes ==
 * [[Docker Cheatsheet]]
+* [[Euler's Journey - Problem 1]]
