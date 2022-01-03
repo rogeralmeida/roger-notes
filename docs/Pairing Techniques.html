@@ -21,7 +21,7 @@
       rel="stylesheet"
       href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/base16/railscasts.min.css"
     />
-    <title>Roger Notes: index</title>
+    <title>Roger Notes: Pairing Techniques</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <!-- CSS only -->
   </head>
@@ -55,83 +55,49 @@
       <div class="row">
         <div class="col-10">
           <div class="content">
-<div id="Roger Notes"><h1 id="Roger Notes" class="header"><a href="#Roger Notes">Roger Notes</a></h1></div>
+<div id="Pairing Techniques"><h1 id="Pairing Techniques" class="header"><a href="#Pairing Techniques">Pairing Techniques</a></h1></div>
+
 <p>
-This is a not a blog. This a repository with my personal notes. Some of the notes I have imported from my previous blogs, some are incomplete and some are just 2 lines long.
-If you like some thing, feel free to share.
-Please leave a comment if you would like to discuss any item.
+This week my colleague Guilherme Motta and I did a presentation about Pair Programming, that were really fun, we learned a lot. During our research I noticed that there are few posts, wikis or sites about Pairing Practices, so I'm sharing with you some practices that we found.
 </p>
 
-<div id="Roger Notes-Product"><h2 id="Product" class="header"><a href="#Roger Notes-Product">Product</a></h2></div>
-<ul>
-<li>
-<a href="3Xs.html">3Xs</a>
+<div id="Pairing Techniques-Ping Pong"><h2 id="Ping Pong" class="header"><a href="#Pairing Techniques-Ping Pong">Ping Pong</a></h2></div>
 
-</ul>
-<div id="Roger Notes-Leadership"><h2 id="Leadership" class="header"><a href="#Roger Notes-Leadership">Leadership</a></h2></div>
-<ul>
-<li>
-<a href="Roger's user manual.html">Roger's user manual</a>
+<p>
+In this technique the first programmer writes a minimal failing unit test, the second programmer modifies the code to pass the unit test(s) than the second programmer writes a new minimal failing unit test and gave the keyboard back to first programmer, and so on. This loop continues as long as any programmer is able to write failing unit tests. The technique can result in the driver role switching as often as a few minutes or less.
+Pros: CV taught me this one and was really fun, because you don't have to discuss a lot, although you keep conflicting the programmer's ideas.  
+Cons: I don't know.
+</p>
 
-<li>
-<a href="Empathy vs Sympathy.html">Empathy vs Sympathy</a>
+<div id="Pairing Techniques-Chess Clock"><h2 id="Chess Clock" class="header"><a href="#Pairing Techniques-Chess Clock">Chess Clock</a></h2></div>
 
-<li>
-<a href="Hire slow &amp; fire fast.html">Hire slow &amp; fire fast</a>
+<p>
+Using a chess clock the pair define a time interval to each one be the driver, when the clock rings the pair switch theirs positions.
+Pros: Ensure that each programmer get the keyboard.
+Cons: It can be inconvenient to pass the keyboard in the middle of a method or idea.
+</p>
 
-<li>
-<a href="Leave the jungle behind.html">Leave the jungle behind</a>
+<div id="Pairing Techniques-10-second rule"><h2 id="10-second rule" class="header"><a href="#Pairing Techniques-10-second rule">10-second rule</a></h2></div>
 
-<li>
-<a href="Mary Pretty Journey.html">Mary Pretty Journey</a>
+<p>
+The navigator should wait 10 seconds before pointing out a typo. Generally that’s long enough for the driver to correct a typo that’s already noticed. Excessive interruptions are distracting.
+Pros: No one get nervous.
+Cons: It sucks if you are the navigator.
+</p>
 
-</ul>
-<div id="Roger Notes-Random"><h2 id="Random" class="header"><a href="#Roger Notes-Random">Random</a></h2></div>
-<ul>
-<li>
-<a href="Three Miracles (or how to win trust).html">Three Miracles (or how to win trust)</a>
+<div id="Pairing Techniques-Think Out Loud"><h2 id="Think Out Loud" class="header"><a href="#Pairing Techniques-Think Out Loud">Think Out Loud</a></h2></div>
 
-<li>
-<a href="Illusion of competence.html">Illusion of competence</a>
+<p>
+The driver “thinks out loud” as he/she’s coding. This helps keep the navigator in the loop, and communicates the intent better. It’s certainly not a technique that most people practice without suggestion, however.
+Pros: Pair is about conflicting ideas and talk is a good way to say what you are think about.
+Cons: You may strain your vocal cords.
+</p>
 
-<li>
-<a href="How I found a job in Sydney, Australia.html">How I found a job in Sydney, Australia</a>
-
-<li>
-<a href="Stand-up anti-pattern: Report to boss.html">Stand-up anti-pattern: Report to boss</a>
-
-<li>
-<a href="My e-mail policy.html">My e-mail policy</a>
-
-<li>
-<a href="Information radiators vs Information refrigerators.html">Information radiators vs Information refrigerators</a>
-
-<li>
-<a href="Better be idiot for 5 minutes.html">Better be idiot for 5 minutes</a>
-
-</ul>
- 
-<div id="Roger Notes-Tech Notes"><h2 id="Tech Notes" class="header"><a href="#Roger Notes-Tech Notes">Tech Notes</a></h2></div>
-<ul>
-<li>
-<a href="Docker Cheatsheet.html">Docker Cheatsheet</a>
-
-<li>
-<a href="Euler's Journey - Problem 1.html">Euler's Journey - Problem 1</a>
-
-<li>
-<a href="Tracing bullet pattern.html">Tracing bullet pattern</a>
-
-<li>
-<a href="How to learn vim.html">How to learn vim</a>
-
-<li>
-<a href="Developer's book canon.html">Developer's book canon</a>
-
-<li>
-<a href="Pairing Techniques.html">Pairing Techniques</a>
-
-</ul>
+<div id="Pairing Techniques-Sharing the ppt..."><h2 id="Sharing the ppt..." class="header"><a href="#Pairing Techniques-Sharing the ppt...">Sharing the ppt...</a></h2></div>
+<p>
+You can find the slides here: <a href="https://www.slideshare.net/rogercafe/pair-programming-presentation">Pair Programming Presentation</a>
+</p>
+ <iframe src="//www.slideshare.net/slideshow/embed_code/key/4KVGOjPu63iopM" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/rogercafe/pair-programming-presentation" title="Pair Programming Presentation" target="_blank">Pair Programming Presentation</a> </strong> from <strong><a href="https://www.slideshare.net/rogercafe" target="_blank">ThoughtWorks</a></strong> </div>
 </div>
           <div id="disqus_thread"></div>
         </div>

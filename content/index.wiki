@@ -26,3 +26,4 @@ Please leave a comment if you would like to discuss any item.
 * [[Tracing bullet pattern]]
 * [[How to learn vim]]
 * [[Developer's book canon]]
+* [[Pairing Techniques]]

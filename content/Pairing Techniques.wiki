@@ -1,0 +1,31 @@
+= Pairing Techniques =
+
+This week my colleague Guilherme Motta and I did a presentation about Pair Programming, that were really fun, we learned a lot. During our research I noticed that there are few posts, wikis or sites about Pairing Practices, so I'm sharing with you some practices that we found.
+
+== Ping Pong ==
+
+In this technique the first programmer writes a minimal failing unit test, the second programmer modifies the code to pass the unit test(s) than the second programmer writes a new minimal failing unit test and gave the keyboard back to first programmer, and so on. This loop continues as long as any programmer is able to write failing unit tests. The technique can result in the driver role switching as often as a few minutes or less.
+Pros: CV taught me this one and was really fun, because you don't have to discuss a lot, although you keep conflicting the programmer's ideas.  
+Cons: I don't know.
+
+== Chess Clock ==
+
+Using a chess clock the pair define a time interval to each one be the driver, when the clock rings the pair switch theirs positions.
+Pros: Ensure that each programmer get the keyboard.
+Cons: It can be inconvenient to pass the keyboard in the middle of a method or idea.
+
+== 10-second rule ==
+
+The navigator should wait 10 seconds before pointing out a typo. Generally that’s long enough for the driver to correct a typo that’s already noticed. Excessive interruptions are distracting.
+Pros: No one get nervous.
+Cons: It sucks if you are the navigator.
+
+== Think Out Loud ==
+
+The driver “thinks out loud” as he/she’s coding. This helps keep the navigator in the loop, and communicates the intent better. It’s certainly not a technique that most people practice without suggestion, however.
+Pros: Pair is about conflicting ideas and talk is a good way to say what you are think about.
+Cons: You may strain your vocal cords.
+
+== Sharing the ppt... ==
+You can find the slides here: [[https://www.slideshare.net/rogercafe/pair-programming-presentation|Pair Programming Presentation]]
+%plainhtml <iframe src="//www.slideshare.net/slideshow/embed_code/key/4KVGOjPu63iopM" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/rogercafe/pair-programming-presentation" title="Pair Programming Presentation" target="_blank">Pair Programming Presentation</a> </strong> from <strong><a href="https://www.slideshare.net/rogercafe" target="_blank">ThoughtWorks</a></strong> </div>
