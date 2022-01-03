@@ -1,0 +1,9 @@
+= The question is Why not to automate? =
+
+Lately, I have been in some meetings to discuss if we should automate the tests scenarios or not.
+After some discuss with my colleagues we came up with this pattern:
+When reviewing a story instead of asking if we should automated the tests for the story ask: Why not to automate the tests scenarios for this story?
+If we don't have a really good reason to not automate, let's automate.
+If the reason is related to the size of the test scenarios, the difficult to write all the scenarios or quantity of scenarios then we should break/rewrite the story.
+If there's any technical reason, apply the [[https://www.moresteam.com/toolbox/5-why-analysis.cfm|5 Whys' analysis]] to find the root cause, that in most of the cases will be a [[https://martinfowler.com/bliki/TechnicalDebt.html|technical debt]].
+What will be left is just pure manual tasks, like visual validation that could not be automated.

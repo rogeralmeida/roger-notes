@@ -30,3 +30,4 @@ Please leave a comment if you would like to discuss any item.
 * [[Pairing Techniques]]
 * [[Remote Pairing]]
 * [[How to avoid losing a unused terminal command line]]
+* [[The question is Why not to automate]]
