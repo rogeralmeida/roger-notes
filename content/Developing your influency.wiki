@@ -1,0 +1,12 @@
+= Developing your influency =
+
+A long time ago I gave a tech talk about Influency.
+My experience in this topic comes mostly from three books: How to win friends and Influence people by Dale Carnegie, The 7 habits of highly effective people by Stephen R. Covey and the Holy Bible (you cannot deny the influence power the Bible had in our society ;) )
+If you already read the Dale Carnegie's book, you will see that the topics for the deck came from there, but while talking I was browsing the three book ideas on this subject.
+Here is the deck:
+
+
+== Influencing people ==
+%plainhtml <iframe src="//www.slideshare.net/slideshow/embed_code/key/b1573qQYRdacHa" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/rogercafe/influencing-people-5814781" title="Influencing people" target="_blank">Influencing people</a> </strong> from <strong><a href="https://www.slideshare.net/rogercafe" target="_blank">ThoughtWorks</a></strong> </div>
+
+I'll not describe the deck here as each slide deserves a note. Some day I'll write more about it.
