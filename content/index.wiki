@@ -3,6 +3,7 @@
 == Product ==
 * [[3Xs]]
 == Leadership ==
+* [[Roger's user manual]]
 * [[Empathy vs Sympathy]]
 * [[Hire slow & fire fast]]
 * [[Leave the jungle behind]]
@@ -19,3 +20,4 @@
 * [[Docker Cheatsheet]]
 * [[Euler's Journey - Problem 1]]
 * [[Tracing bullet pattern]]
+* [[How to learn vim]]
