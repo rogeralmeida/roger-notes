@@ -1,0 +1,18 @@
+= Remote Pairing =
+
+In my career I had some moments of very effective remote pairing experiences. 
+That experience gave me some thoughts about remote pairing that I would like to share here.
+
+== Tools ==
+
+To share the screen, we used VNC (TightVNC to be more specific). It works well and you can config the compression and color resolution, what helps with slow connections.
+To voice chatting we have used Skype, with a two-ear head-set. In my opinion the two-ear is very important, because it helps you to don't be disturbed by any noise from your local office.
+Normally I use a two monitors set-up with a virtual-box filling one of the monitors, that helps to you not open your personal e-mail in a shared screen.
+
+The pairs were in different timezones. Brazil is 4 hours ahead of USA ET. For this reason we did not pair for the entire work-day. And it was a good thing, as both sides had time to do other work which is not related to the story at hand.
+Also we used the Pomodoro Technique that was good to things like going to bathroom, smoking, drink water, cellphones, etc...
+
+== Tips ==
+
+TDD. Use the ping-pong technique.
+Turn on the video on Skype (Gtalk, Msn, whatever...) and raise your hand when you gonna start/stop driving.

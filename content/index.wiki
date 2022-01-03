@@ -27,3 +27,4 @@ Please leave a comment if you would like to discuss any item.
 * [[How to learn vim]]
 * [[Developer's book canon]]
 * [[Pairing Techniques]]
+* [[Remote Pairing]]
