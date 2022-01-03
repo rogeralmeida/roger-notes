@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.css"
+    />
+    <link rel="Stylesheet" type="text/css" href="style.css" />
+    <!-- <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css" /> -->
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/base16/railscasts.min.css"
+    />
+    <title>Roger Notes: Mary Pretty Journey</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!-- CSS only -->
+  </head>
+  <body data-spy="scroll" data-target="#toc">
+    <div class="container">
+      <div
+        class="
+          d-flex
+          flex-column flex-md-row
+          align-items-center
+          pb-3
+          mb-4
+          border-bottom
+        "
+      >
+        <a
+          href="index.html"
+          class="d-flex align-items-center text-dark text-decoration-none"
+        >
+          <span class="fs-4">Roger's Notes</span>
+        </a>
+
+        <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
+          <a
+            class="me-3 py-2 text-dark text-decoration-none"
+            href="index.html"
+            >Index</a
+          >
+        </nav>
+      </div>
+      <div class="row">
+        <div class="col-10">
+          <div class="content">
+<div id="Mary Pretty Journey"><h1 id="Mary Pretty Journey" class="header"><a href="#Mary Pretty Journey">Mary Pretty Journey</a></h1></div>
+
+<p>
+Last week I had a catch-up with an ex-colleague. We use to run a DevOps team together at <a href="http://www.tyro.com">Tyro</a>. He was, and still is the tech lead, and I was Delivery Lead/People Manager.
+</p>
+
+<p>
+I was curious about the people from the team we used to lead together and he gave me the updates:
+</p>
+<blockquote>
+Some people left, others moved to other teams, others rotated but were back, etc...
+</blockquote>
+<p>
+But he mentioned one thing that I caught my attention:
+</p>
+<blockquote>
+Mary Pretty* is still there and she is performing really really well.
+</blockquote>
+
+<p>
+When he said that a whole flash back movie started playing again on my memory. Mary Pretty, was a non-developer ops woman who transitioned successfully to become a developer. Her story is worth sharing.
+</p>
+
+<div id="Mary Pretty Journey-Background information"><h2 id="Background information" class="header"><a href="#Mary Pretty Journey-Background information">Background information</a></h2></div>
+
+<p>
+Our team back then was part of a critical remediation initiative with very aggressive goals:
+</p>
+
+<ul>
+<li>
+Help breakdown the biggest monolith in the company
+
+<li>
+Extract the reporting capability out of the monolith
+
+<li>
+Migrate historical data out of the database, so that the database could be trimmed to 3 months of data
+
+</ul>
+
+<p>
+All of that while adopting a new tech stack (containers in ECS on AWS) and a new DevOps operational model: You build it, you run it.
+</p>
+
+<p>
+When I assumed the team I had 2 years in the company already, and during my whole time I always heard from multiple Tech Leads that they have tried to put The monolith in a container and it was just too hard. The database was the biggest problem.
+</p>
+
+<p>
+Until one day, the Platform Tribe was doing a iteration demo and one of the items was “Monolith in containers”. To my surprise one of their engineers was able to run the monolith not in a single container, but in multiples actually. After the demo I went to talk to the engineer asking more details. I was curious about the process that lead to a place that many others said it would never be possible to achieve.
+</p>
+
+<p>
+To my surprise the engineer said something along the lines: “It was simple, I just had to divide and conquer... trim the DB... use multi-stage Dockerfile... etc...”. It was simple but genius.
+</p>
+
+<p>
+Since then I started paying attention to her and keeping in contact.
+</p>
+
+<p>
+I soon learned that she didn’t have a great reputation. She was hired as a Performance Test Engineer. A role that the company was not willing to keep. And looks like she was not motivated as well. It was common to see her on the phone outside the working area.
+</p>
+
+<p>
+I found out, in one of the [many] management meetings, that her team would be disbanded and if we could not find another team to accomodate them, the company would have to let them go ☹️
+</p>
+
+<p>
+I knew that my team would have to make heavy use of Docker. We had just lost our strongest person with Docker a few weeks ago. I mentioned to my boss that I would like to give Mary Pretty a chance.
+</p>
+
+<p>
+I went to talk with her, to explain that it would mean a career change from Infra to Dev[Ops]. She acknowledge it and after a few days she accepted the challenge.
+</p>
+
+<p>
+After a small internal interview process she joined our team.
+</p>
+
+<div id="Mary Pretty Journey-She is not a developer"><h2 id="She is not a developer" class="header"><a href="#Mary Pretty Journey-She is not a developer">She is not a developer</a></h2></div>
+
+<p>
+It didn’t take long for an interesting theme to show-up during my 1o1 sessions: “She is not a developer.”
+</p>
+
+<p>
+Multiple team members told me on catch-ups that she was not “made of the same material” as the rest of us. And she also said that. I remember that in one of the first catch-ups we had she was out of hope to become a developer. Everybody else in the team had more than 5 years of experiencie. A few with more than 10 actually.
+</p>
+
+<p>
+Back them I had just finished reading the Give and Take from Adam Grant, and I was following his podcasts as well. And in one chapters or in a podcast he told the story of a finance professor that had a ridiculous ratio of students who would achieve CFO positions on Fortune 500 companies. His secret was that he would imagine a great future for his students, even if the students didn’t believe on it. I decided to apply the same technique with Mary Pretty.
+</p>
+
+<p>
+I told her in one of our first catch-ups: “Becoming a developer is not a days or weeks process. It will take years, but we can do it!”
+</p>
+
+<p>
+Since then we started many different actions to help her.
+</p>
+
+<div id="Mary Pretty Journey-Adding value"><h2 id="Adding value" class="header"><a href="#Mary Pretty Journey-Adding value">Adding value</a></h2></div>
+
+<p>
+With any programming task Mary Pretty would struggle to add value. And the feeling of been a weight for the team would just kill her motivation and she would eventually leave the company. So I had to do something.
+</p>
+
+<p>
+The team was focused on functional requirements, but I knew that there were important items that we were not tackling because the urgent things were consuming all of our capacity. In the urgent things I found items that she could execute:
+</p>
+
+<ul>
+<li>
+Docker infrastructure
+
+<li>
+Testing strategy for CI/CD pipelines
+
+<li>
+Infrastructure refactoring
+
+<li>
+Etc...
+
+</ul>
+
+<p>
+As I was the Delivery Lead, I bumped some of this items up in the priority list. During the team planning I mentioned that I would like Mary Pretty to lead that stream of work, but share the knowledge with the rest of the team. So she would never work alone on it, instead she would always be pairing with someone.
+</p>
+
+<p>
+The team was used to pair, and we would rotate pairs every Tuesdays and Thursdays.
+</p>
+
+<p>
+Every 2, 3 days Mary Pretty would be spreading her infra/testing knowledge with another team member.
+</p>
+
+<p>
+I immediately notice that it changed the way the other team members would perceive her. And she also had something for fill proud of: Her contribution to the team.
+</p>
+
+<div id="Mary Pretty Journey-Becoming a developer"><h2 id="Becoming a developer" class="header"><a href="#Mary Pretty Journey-Becoming a developer">Becoming a developer</a></h2></div>
+
+<p>
+But it was just a temporary solution. I knew that at some moment the infrastructure work would be done and she would have to move back to the hard work of refactoring a giant java monolith into Kotlin micro-services. Because we would pair, wherever she had to pick a programming task she would almost consume the whole morning of our Tech Lead and/or another strong developer. It was a pain for the rest of the team. After a few complains from multiple team members I decided to turn “my problem in our problem”. I then went to the most strong technical people in the team as asked for strategies to help her accelerate her learning curve. Some of them offered to help her. Some recommended books, courses, good contents, etc...
+</p>
+
+<p>
+She accepted the help and went further. She asked help from people from another teams.
+</p>
+
+<p>
+We normally would have our weekly 1o1 on Mondays, and she would tell me about a new programming concept she studied during the weekend. Some weekends she would skip to relax, but I would say that at 80% of her weekends in her first year with us were dedicated to sharpener her coding axe.
+</p>
+
+<p>
+I remember that she used to have lunch inside the company and during almost a year she would spend her lunch time asking questions to other developers and doing pairing session with other devs to validate programming exercises.
+</p>
+
+<div id="Mary Pretty Journey-Performance Review"><h2 id="Performance Review" class="header"><a href="#Mary Pretty Journey-Performance Review">Performance Review</a></h2></div>
+
+<p>
+I have to highlight the amazing support I receive from my boss during the whole process. She could see Mary Pretty commitment and effort and we knew that she was the kind of professional we were looking for. But there was a issue, as a Performance Test Engineer, Mary Pretty had one of the highest salaries in the whole engineering department. During our weekly 1o1s I then started to mention that the performance review cycle was coming and that she probably would not be able to receive a normal salary increase as she was used to. But her response was that she was actually grateful for the opportunity of transitioning career while keeping her job.
+</p>
+
+<p>
+The performance review happened almost one year after Mary Pretty joined our team, and she actually receive a great feedback from her peers. She not only had taught many new skills to her peers, but she had managed to develop her programming skills to the level where she would be able to get any XS, S, M item from the backlog and work on it with minimum support from the tech lead.
+</p>
+
+<p>
+Happily my boss and I managed to actually give her some financial incentive after all the effort we saw her putting during the last months.
+</p>
+
+<div id="Mary Pretty Journey-Key team member"><h2 id="Key team member" class="header"><a href="#Mary Pretty Journey-Key team member">Key team member</a></h2></div>
+
+<p>
+One year after that, Mary Pretty was the go to person for many points of the solution we had developed. Her patience and skill to explain complex stuff made her our best person to on-board new team members in the complexity of our compliance CI/CD pipeline. 
+</p>
+
+<p>
+When she discovered that she was pregnant the whole team started giving suggestion to upcoming boy. I still call him: Boy Pretty ;)
+</p>
+
+<p>
+And on the months before she left for the maternity leave I had to deal with the problem of finding a way to survive without her.
+</p>
+
+<p>
+So, when I heard from the Tech Lead that she still there and is now a key team member is something that I’m so proud of. Reflecting back on it, I’m so grateful for the opportunity of experiencing this firsthand.
+</p>
+
+<p>
+Thanks for been an whole model for us Mary Pretty.
+</p>
+</div>
+          <div id="disqus_thread"></div>
+        </div>
+        <div class="bd-toc col-2 text-muted">
+          <strong class="d-block h6 my-2 pb-2 border-bottom"
+            >On this page</strong
+          >
+          <nav id="toc"></nav>
+        </div>
+      </div>
+    </div>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+    <script>
+      document
+        .querySelectorAll('pre')
+        .forEach((block) => hljs.highlightElement(block))
+      document
+        .querySelectorAll('code')
+        .forEach((block) => hljs.highlightElement(block))
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
+    <script>
+      anchors.add()
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>
+      $(function () {
+        const navSelector = '#toc'
+        const $myNav = $(navSelector)
+        const headers = $(':header')
+        headers.each((index, obj) => {
+          obj.id = obj.id.replace(/[^a-zA-Z0-9]/g, '')
+        })
+        Toc.init({
+          $nav: $myNav,
+          $scope: headers,
+        })
+        $('body').scrollspy({
+          target: navSelector,
+        })
+      })
+    </script>
+    <script>
+      ;(function () {
+        // DON'T EDIT BELOW THIS LINE
+        var d = document,
+          s = d.createElement('script')
+        s.src = 'https://roger-notes.disqus.com/embed.js'
+        s.setAttribute('data-timestamp', +new Date())
+        ;(d.head || d.body).appendChild(s)
+      })()
+    </script>
+    <noscript
+      >Please enable JavaScript to view the
+      <a href="https://disqus.com/?ref_noscript"
+        >comments powered by Disqus.</a
+      ></noscript
+    >
+  </body>
+</html>
