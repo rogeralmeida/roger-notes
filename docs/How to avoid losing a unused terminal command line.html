@@ -21,7 +21,7 @@
       rel="stylesheet"
       href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/base16/railscasts.min.css"
     />
-    <title>Roger Notes: index</title>
+    <title>Roger Notes: How to avoid losing a unused terminal command line</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <!-- CSS only -->
   </head>
@@ -55,92 +55,28 @@
       <div class="row">
         <div class="col-10">
           <div class="content">
-<div id="Roger Notes"><h1 id="Roger Notes" class="header"><a href="#Roger Notes">Roger Notes</a></h1></div>
+<div id="How to avoid losing a unused terminal command line"><h1 id="How to avoid losing a unused terminal command line" class="header"><a href="#How to avoid losing a unused terminal command line">How to avoid losing a unused terminal command line</a></h1></div>
+
 <p>
-This is a not a blog. This a repository with my personal notes. Some of the notes I have imported from my previous blogs, some are incomplete and some are just 2 lines long.
-If you like some thing, feel free to share.
-Please leave a comment if you would like to discuss any item.
+This morning I got a great tip...
+I typed a command in my terminal but I wanted to run another command before executing the line that I just typed without losing the information in the current line.
+For instance:
+I typed in my terminal the command:
 </p>
-
-<div id="Roger Notes-Product"><h2 id="Product" class="header"><a href="#Roger Notes-Product">Product</a></h2></div>
-<ul>
-<li>
-<a href="3Xs.html">3Xs</a>
-
-</ul>
-<div id="Roger Notes-Leadership"><h2 id="Leadership" class="header"><a href="#Roger Notes-Leadership">Leadership</a></h2></div>
-<ul>
-<li>
-<a href="Roger's user manual.html">Roger's user manual</a>
-
-<li>
-<a href="Empathy vs Sympathy.html">Empathy vs Sympathy</a>
-
-<li>
-<a href="Hire slow &amp; fire fast.html">Hire slow &amp; fire fast</a>
-
-<li>
-<a href="Leave the jungle behind.html">Leave the jungle behind</a>
-
-<li>
-<a href="Mary Pretty Journey.html">Mary Pretty Journey</a>
-
-<li>
-<a href="Developing your influency.html">Developing your influency</a>
-
-</ul>
-<div id="Roger Notes-Random"><h2 id="Random" class="header"><a href="#Roger Notes-Random">Random</a></h2></div>
-<ul>
-<li>
-<a href="Three Miracles (or how to win trust).html">Three Miracles (or how to win trust)</a>
-
-<li>
-<a href="Illusion of competence.html">Illusion of competence</a>
-
-<li>
-<a href="How I found a job in Sydney, Australia.html">How I found a job in Sydney, Australia</a>
-
-<li>
-<a href="Stand-up anti-pattern: Report to boss.html">Stand-up anti-pattern: Report to boss</a>
-
-<li>
-<a href="My e-mail policy.html">My e-mail policy</a>
-
-<li>
-<a href="Information radiators vs Information refrigerators.html">Information radiators vs Information refrigerators</a>
-
-<li>
-<a href="Better be idiot for 5 minutes.html">Better be idiot for 5 minutes</a>
-
-</ul>
- 
-<div id="Roger Notes-Tech Notes"><h2 id="Tech Notes" class="header"><a href="#Roger Notes-Tech Notes">Tech Notes</a></h2></div>
-<ul>
-<li>
-<a href="Docker Cheatsheet.html">Docker Cheatsheet</a>
-
-<li>
-<a href="Euler's Journey - Problem 1.html">Euler's Journey - Problem 1</a>
-
-<li>
-<a href="Tracing bullet pattern.html">Tracing bullet pattern</a>
-
-<li>
-<a href="How to learn vim.html">How to learn vim</a>
-
-<li>
-<a href="Developer's book canon.html">Developer's book canon</a>
-
-<li>
-<a href="Pairing Techniques.html">Pairing Techniques</a>
-
-<li>
-<a href="Remote Pairing.html">Remote Pairing</a>
-
-<li>
-<a href="How to avoid losing a unused terminal command line.html">How to avoid losing a unused terminal command line</a>
-
-</ul>
+<pre shell>
+git commit -am "Unit test for scenarios A, B and C"
+</pre>
+<p>
+But I was not sure if I was committing just the scenarios A, B and C that I have changed, I would like to run a git diff before committing but also without losing my committing message...
+Then my friend Duck told me to put a # in the begging of the line and... voilà!
+</p>
+<pre shell>
+# git commit -am "Unit test for scenarios A, B and C"
+</pre>
+<p>
+It transform the line in a comment, so that I could hit enter without executing the commit and that line went to my history so that I could recovery it.
+Thanks Duck.
+</p>
 </div>
           <div id="disqus_thread"></div>
         </div>

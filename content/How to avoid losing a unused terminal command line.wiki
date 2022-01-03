@@ -1,0 +1,16 @@
+= How to avoid losing a unused terminal command line =
+
+This morning I got a great tip...
+I typed a command in my terminal but I wanted to run another command before executing the line that I just typed without losing the information in the current line.
+For instance:
+I typed in my terminal the command:
+{{{shell
+git commit -am "Unit test for scenarios A, B and C"
+}}}
+But I was not sure if I was committing just the scenarios A, B and C that I have changed, I would like to run a git diff before committing but also without losing my committing message...
+Then my friend Duck told me to put a # in the begging of the line and... voilà!
+{{{shell
+# git commit -am "Unit test for scenarios A, B and C"
+}}}
+It transform the line in a comment, so that I could hit enter without executing the commit and that line went to my history so that I could recovery it.
+Thanks Duck.
