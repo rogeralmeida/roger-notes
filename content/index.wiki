@@ -20,6 +20,7 @@ Please leave a comment if you would like to discuss any item.
 * [[My e-mail policy]]
 * [[Information radiators vs Information refrigerators]]
 * [[Better be idiot for 5 minutes]]
+* [[It is not about how quick, it is about how far]]
  
 == Tech Notes ==
 * [[Docker Cheatsheet]]

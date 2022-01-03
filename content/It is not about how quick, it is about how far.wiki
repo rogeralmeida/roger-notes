@@ -1,0 +1,8 @@
+= It is not about how quick, it is about how far =
+
+It's quite common to some business/manager people come to us and say:
+
+    I'm trying to find ways to increase our production capacity... I would like to go faster. How quick can we  go? (...)
+
+The point is: Software development is not about how quick, but about how far.
+We always should think about how long our current solution will survive.
