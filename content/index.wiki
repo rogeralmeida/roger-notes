@@ -22,3 +22,4 @@
 * [[Euler's Journey - Problem 1]]
 * [[Tracing bullet pattern]]
 * [[How to learn vim]]
+* [[Developer's book canon]]
