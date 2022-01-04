@@ -1,0 +1,16 @@
+= Managing workflow is easier than managing schedules =
+
+Last week I got involved in a project and while I was studying the scheduled dates for the project I remember the Lean concept that says: [[http://www.poppendieck.com/|Managing Workflow is a lot easier than Managing Schedules]].
+Old school managers like the idea of managing dates for a project, and they have a false-positive impression that this is enough to set the base for a project, i.e., the project should be build on top of it.
+I agree that this is the starting point, but this is not enough. We need a *workflow* in place to be able to delivery a reliable project. This workfow should be repeated during the project and improved to fit the project reality.
+All the people involved in the project should be able to see the current status of each task in the workflow and see the results of each task in the end of the workflow.
+
+== Some examples of workflow can be: ==
+{{{dot
+"Analysis" -> "Development" -> "Quality Control" -> "Integration"
+"Ready for development" -> "Development" -> "Test"
+}}}
+
+A very important point is that during the project this workflow should be repeated many times. Instead of doing it all at once (waterfall way), do it in small chunks, AKA iterations. Instead of doing the analysis for the whole project before starting the development, do the analysis for a small chunk of [[http://wiki.c2.com/?UserStory|stories]] and move it forward in the workflow.
+At the end of each iteration, the team should get together and discuss what went well and what went not so well in the workflow, collecting action points to improve the workflow.
+This way you can know in advance if the dates for the project are feasible or not. And yes, Managing Workflow is a lot easier than Managing Schedules.
