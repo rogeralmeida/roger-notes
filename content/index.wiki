@@ -34,3 +34,4 @@ Please leave a comment if you would like to discuss any item.
 * [[Remote Pairing]]
 * [[How to avoid losing a unused terminal command line]]
 * [[The question is Why not to automate]]
+* [[Git notes]]

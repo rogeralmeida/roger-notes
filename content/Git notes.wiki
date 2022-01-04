@@ -1,0 +1,7 @@
+= Git notes =
+
+== Website to understand git "areas" ==
+Two teams in a previous company decided to give git a try. So in the last weeks I have expend sometime talking about DVCS. One item that I have seen that is difficult to understand about git is that it has many "areas".
+To explain the movement of changes between the areas normally I draw a picture in a paper with many arrows, showing the movement of changes for each git command...
+Gladly I found the site that taught me this: http://www.ndpsoftware.com/git-cheatsheet.html
+If you have to explain any git command to someone, definitely I recommend you to use this site.
