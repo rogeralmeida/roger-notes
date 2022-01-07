@@ -1,0 +1,39 @@
+= Expectation Matrix =
+
+The [[https://www.funretrospectives.com/role-expectations-matrix/|Expectation Matrix]] is a good tool to get a new assembled team started in a good way.
+
+{{file:images/expecationmatrix.png|expectation matrix|class="img-fluid"}}
+
+Here is an example from one that I participated during my time at Tyro.
+
+{{file:images/emexample.jpg|Expecation Matrix Example|class="img-fluid"}}
+
+== How to run it ==
+
+1) Preparing the board
+  a) If you are using a physical board, consider how many people you will have per role and make sure there is enough space for people to add post-it. Check the example above, where we left more space in the DEV row since there are multiple devs per teams.
+  b) If you are using a digital board, like [[https://miro.com/|Miro]], make sure you left the board flexible enough to expand
+  c) Create the table where the number of columns and the number of rows is equal to the number of roles that will participate in the exercise.
+    i) e.g. suppose you will do this exercise for Sales Representatives, Sales Area Managers and Sales Team Leaders. You would then create a 3x3 matrix.
+  d) Use the roles names as the "title" of each column and each row
+2) Facilitating the session
+  a) Explain that the objective is to make explicit the expectation that each role have about the other roles
+    i) I like to highlight that this is a lightweight version of a RASIC matrix
+    ii) I also mention that if needed this exercise can lead to a RASIC matrix work to be done later on
+  b) Explain that we will discuss what the ROW expects from the COLUMN
+  c) For each column do:
+    i) Set a timer for people to brainstorm what they expect from the row in the column
+      * 5~10 minutes should be enough
+    ii) Ask each participant to add their items to the board, one by one, reading it out
+      * It is OK to ask the individual to clarify what they mean with a specific item
+      * But avoid arguments about the items while someone is adding it. Later on there will be a moment of discussion.
+      * If you are running a remote session with virtual board, probably everybody will already have added their items to the board. But it still validate to at least read out all the items, or ask the invidious to read out their points.
+    iii) Once all the parcitipants have contributed to the role column ask some converging questions. e.g.:
+        * Is there anything here that someone strongly disagree?
+        * Any surprise here? 
+        * Anything is not clear yet?
+  d) By the end of all the columns have another round of group conversation to validate if everybody is aligned on what each role expects from each other.
+3) After the session
+  a) Take photo/screenshot of the board
+  b) Document the matrix in your internal wiki
+  c) Keep it accessible to the whole group. There is a high chance you will have to refer to it in the coming weeks to make sure the team is following it.
