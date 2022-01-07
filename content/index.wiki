@@ -6,6 +6,10 @@ Please leave a comment if you would like to discuss any item.
 == Product ==
 * [[3Xs]]
 * [[Managing workflow is easier than managing schedules]]
+* [[Digital Product]]
+* [[Product Market Fit]]
+* [[Product Solution Fit]]
+
 == Leadership ==
 * [[Roger's user manual]]
 * [[Empathy vs Sympathy]]
@@ -13,6 +17,7 @@ Please leave a comment if you would like to discuss any item.
 * [[Leave the jungle behind]]
 * [[Mary Pretty Journey]]
 * [[Developing your influency]]
+* [[Expectation Matrix]]
 
 == Random ==
 * [[Three Miracles (or how to win trust)]]
@@ -23,7 +28,7 @@ Please leave a comment if you would like to discuss any item.
 * [[Information radiators vs Information refrigerators]]
 * [[Better be idiot for 5 minutes]]
 * [[It is not about how quick, it is about how far]]
- 
+
 == Tech Notes ==
 * [[Docker Cheatsheet]]
 * [[Euler's Journey - Problem 1]]
