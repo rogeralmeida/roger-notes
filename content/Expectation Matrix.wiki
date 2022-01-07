@@ -2,11 +2,11 @@
 
 The [[https://www.funretrospectives.com/role-expectations-matrix/|Expectation Matrix]] is a good tool to get a new assembled team started in a good way.
 
-{{file:images/expecationmatrix.png|expectation matrix|class="img-fluid"}}
+{{local:https://rogeralmeida.github.io/roger-notes/images/expecationmatrix.png|expectation matrix|class="img-fluid"}}
 
 Here is an example from one that I participated during my time at Tyro.
 
-{{file:images/emexample.jpg|Expecation Matrix Example|class="img-fluid"}}
+{{local:https://rogeralmeida.github.io/roger-notes/images/emexample.jpg|Expecation Matrix Example|class="img-fluid"}}
 
 == How to run it ==
 
