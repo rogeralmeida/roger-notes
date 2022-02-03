@@ -35,6 +35,7 @@ Please leave a comment if you would like to discuss any item.
 * [[Tracing bullet pattern]]
 * [[How to learn vim]]
 * [[Developer's book canon]]
+* [[Pair programming for non technical managers]]
 * [[Pairing Techniques]]
 * [[Remote Pairing]]
 * [[How to avoid losing a unused terminal command line]]
