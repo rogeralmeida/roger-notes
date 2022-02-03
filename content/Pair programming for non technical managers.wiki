@@ -1,0 +1,151 @@
+= Pair Programming for non technical managers =
+
+Over the years I have been in many situations where I had to explain to non-technical people, mostly managers about why some high-effective software development teams work in pairs.
+This note is my attempt to have a central place to point people to and hopefuly give a good overview of the work of software development teams and why working in pairs makes sense for some teams.
+
+== Back history ==
+Pair programming one of the 6 eXtreme Programming practices. In it a pair of software developer will work on the same task, at the same time, using the same workstation.
+It is a very common practice for high effective software development teams.
+But I agree it is counter intuitive, so allow me to guide you through some rational about why pair programming works for some teams.
+
+== Writing source code is not hard ==
+Most programming languages are very simple languages. They have a limited number of reserved words that the software engineer will use to describe and represent the software. Check this:
+
+
+| Language | # reserved words |
+|----------|------------------|
+| Java     | 67               |
+| Python   | 33               |
+| Ruby     | 41               |
+| Golang   | 25               |
+
+If you think about programming as learning a new language, the language itself would be much simpler than English, Portuguese, Korean or any other language used in the multiple countries around the globe.
+It is not hard to write programming code in modern languages, the compilers and linters are very good at telling you if your code is correct or not.
+The modern IDE (Integrated Development Environments) and text editors also give realtime feedback about the code syntax.
+So typing code in an programming language is not the hard part. Anyone can do it with minimal training.
+If that is the case, what is the hard part of creating software.
+
+== The hard thing about programming ==
+One of the most respect author of Software Development related books says there are [[https://martinfowler.com/bliki/TwoHardThings.html | two hard things in software development]]:
+1. Cache invalidation
+2. And naming things
+
+I actually have two slight differents items:
+1. Know what to do
+2. Know how to do it
+
+=== Know what to do ===
+I know that if you are not a software developer you might be thinking:
+    Roger, that cannot be that hard.
+    
+Trust me, most of a software engineer time will be spend just understanting what needs to be done. Different from physical products where people know the limitations of our universe and what is possible and what is currently impossible. A software based product exists only as an idea. And the software engineer needs to figure out what is the "idea" that the user has on its mind. This is hard.
+Before the Agile revolution in early 2000, software development projects would spend months just gathering requirements.
+People would make a living as a System Analyst which job was to write technincal documentation so that Software Developer could understand what to do.'
+Luckly we were able to learn from our mistakes and with the Agile revolution, we move towards an iterative development process where instead of "gathering requirements" we would understand an small part of the "whole idea", capture it as an User Story, develop quickly and do a demo to receive feedback about the work.
+Let me see if I can apply that to a non software project.
+
+    Suppose you are a musician, and I ask you to compose a song for my upcoming 25 years wedding anniversary
+    
+I can tell you that I would like a valsa and I would like it to highlight special moments of my marriage that I'm happy to tell you. The wedding anniversary is in 7 days.
+You could:
+1. Think about it and perform it on my wedding anniversary party as a surprise
+2. Show me one day before the party to get feedback and then perform at my wedding anniversary
+3. Or send daily drafts as audio messages so that I could provide feedback about it.
+
+Clearly the option number 3 is the one with higher chances of producing the best outcome. Doesn't matter how much I try to document my musical taste, I would never ever be able to tell you exactly the kind of music I can hear in my brain.
+If you send me drafts as early as possible that would be the best way for me to provide you feedback on the notes, phrases, wording, key, BPM, length, dancing/non dancing, etc...
+
+Agile methods apply the same principle for software: The sooner we show "someone" what we are thinking the better
+
+=== Know how to do it ===
+This one is hard to explain to non-technical managers but I'll do my best.
+Lets pick a concrete example. Assume we are developing a website to find and buy the best flight from one city to another. And we have an user story in the following format:
+    
+    As an user
+    I want to pay my flight using my Credit Card
+    So that I can book my flight for my next travel
+     
+It sound very straight forward from a business requirement point of view, but the technical solution behind it can be enourms. Some of the questions that a software developer will have to think about are:
+* Do I have to validate the Credit Card details
+* Where should we store the Credit Card details
+* How to I integrate it with the Card Scheme (Visa, MasterCard, American Express, etc...)
+* How to handle the scenario of payment declined
+* What is an acceptable response time for the "pay" button
+* How to make this page secure
+* How to test this
+* Do we have other payment options
+* Do we expect to accept other payment options in the future
+* How to reconcile the payment
+* Etc...
+
+That not to mention the actual drawing of the technical solution. Deciding where in the code each behaviour will be is an huge task.
+
+==== The easy trap ====
+An extra poin this is this perception for the people that are not doing the work that it is easy. In my experience everytime someone starts a planning session by saying "this is simple" or "it is easy" I assume that either the person doesn't know what she/he is talking about or it is a trap.
+
+Sometimes both are true.
+
+Software development is a constant trade off between now and the future. I 100% agree that there is an easy way to solve an specific requirment. But doesn't come for free. Giving enough experience time and you will come accross a situation where the development velocity of a technical is so slow that the team will start to claim that they must rewrite the software.
+Software is like your car, you must spend time and cash with maintenance if you expect to extend its lifetime.
+
+== How can pair programming help with it ==
+So to summarise my points so far.
+1. It is not hard to type code in any modern programming language these days
+2. But it is hard for a software engineer to understand what to code
+3. And it is hard to understand what is the best way to code it
+
+OK, enough about developing empathy for the Software Development function. Let me connect it back to the Pair Programming technique.
+Although it is easy to write text compliant with a programming language, it still very ease to introduce bugs. Having another person to observe the code and prevent easy bugs to enter the code is a great way of reducing production problems.
+
+In the pair programming you must discuss with your pair your understanding about the task at hand. That forces your brain to think slow about the task. I'm my experience, different people might have slight different understanding about the task scope and it helps a lot to validate assumptions and highlight open questions.
+
+Having a pair to think about the technical solution also makes sure that we are considering different cross-function requirements like: auditability, tracebility, security, durability, availability, etc... Again, having someone to discuss the technical solution forces the brain to slow down and consider details that "system 1" would not consider.
+
+Another important point is the economics of defects. 
+
+    "LaurieWilliams of the University of Utah in Salt Lake City has shown that paired programmers are only 15% slower than two independent individual programmers, but produce 15% fewer bugs. Since testing and debugging are often many times more costly than initial programming, this is an impressive result." (http://www.economist.com/displayStory.cfm?Story_ID=779429), September 20th 2001 For more on this, see PairProgrammingBenefits and LaurieWilliams.
+
+A production bug is many times more costly than investing time in preventing it from reaching production. Normally a production bug is only detected days or weeks after that line of code was introduced. The developer lost the context about it and will be working on something else. Many times the developer might not even be available anymore.
+
+So pair programming in general helps with the hard parts of software development. But there is more.
+
+== Other benefits of pair programming ==
+
+=== Avoid red bus problem ===
+    What happens if a Red Bus hits one of your developers?
+    
+Pair programming helps spread the work between multiple members of your team. People will get sick, go on holidays, resign, be reassigned and many other things gonna happen during a project. In my experience, it pays off to assume you will have people available only on 80% of the time.
+Pair programming contributes to Collective Code Ownership
+
+=== Collective Code Ownership ===
+Collective code ownership is another crucial part of eXtreme Programming. Pair Programming brings it naturally, as you would never have someone working on something in isolation. Have you ever been in a situation where people said: `Oh, only John can work on that area`. It, that is the lack of Collective Code Ownership.
+
+=== On-boarding new hires ===
+I have seem companies where the onboarding of new team members is measured in months to years. For a new team member to achieve full velocity it can take months. Pair Programming helps with that as a person will be adding value from their first day and be learning from more experienced people from the beggining.
+
+
+== Other Pair Programming thoughts ==
+
+=== F1 vs Rally ===
+
+In a Formula 1 race, after the 3rd lap the pilot is in an automatic mode. The circuit is a closed loop, and after a few laps the pilot knows the ideal trace and can only focus on take over and protecting the position. Compare that to the Paris Rally Dacar race. In a Rally race normally you will have the pilot (who focus on the next 100 meters ahead) and the navigator who focus on the GPS and a map.
+
+Comparing this two races it is clear their differences:
+
+
+| Item             | F1                                                                                | Rally                                                      |
+|------------------|-----------------------------------------------------------------------------------|------------------------------------------------------------|
+| Circuit          | A closed circuit with a know number of laps                                       | An open map with an starting point and a final destination |
+| Ideal track      | Rapidly know after a few laps                                                     | Non existent, must be constantly recalculated              |
+| Number of pilots | Just one (but the pilot receives guidance from an engineer in the box over radio) |                                                            | Two for cars and trucks. A pilot and a navigator
+
+The software development work more related to the high uncertainty of the Rally then to the controlled environment of a F1 race ;)
+The Driver focus on the code that we are writing at the moment, the Navigator focus on the direction we are going.
+
+=== It is biblical ===
+If you still not convinced, my final argument is: `It is biblical`
+    Two are better than one, because they have a good return for their labor. -- Ecclesiastes 4:9 (NIV)
+
+= References =
+* https://wiki.c2.com/?ExtremeProgrammingPractice
+* https://martinfowler.com/bliki/TwoHardThings.html
